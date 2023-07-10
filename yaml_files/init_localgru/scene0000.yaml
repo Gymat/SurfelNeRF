@@ -1,0 +1,44 @@
+img_size_h: 480
+img_size_w: 640
+KEEP_TRAINING: True
+IS_TRAIN: False
+TRAIN:
+    BATCH_SIZE: 1
+    PIN_MEMORY: True
+    SHUFFLE_DATA: False
+DATA:
+    RANDOM_SAMPLE_SIZE: 200
+    FAR_PLANE: 15.0
+    NEAR_PLANE: 0.1
+    IMG_WH: [640, 480]
+    RGB_Image_DIR: "./datasets/export_Scannet_test"
+    Depth_Image_DIR: "./datasets/export_Scannet_test"
+    DATASET_NAME: "Scannet_S1_scenes_test"
+    DATA_DIR: "./datasets/export_Scannet_test"
+    SCANNET_PKL_PATH: "./datasets/preprocessed_data/scannet_preprocessed_pkl/p2_output_simple_recon_8scenes"
+    ALL_JSON_PATH: "./datasets/preprocessed_data/json_path/p1_output_test1"
+    SCENE_NAME: "scene0000_01"  # use when testing
+    GET_ITEM_TYPE: 1  # 1 for training set, 2 for test set, 3 for all set!
+    SCANNET_TXT_PATH: "./txt/nerfusion_split"
+MODEL:
+    NAME: "PointsSurfelModel_wGRU_v1"
+    FUSION:
+        BUILD_FUSION: True
+        NAME: "GRU2D_naive_Wweights"
+    NEED_POINTCON: False
+    WEIGHTS: "abcd"
+    AGGREGATOR:
+        NAME: "PointAggregator_Surfel"
+    RASTERIZER:
+        NAME: "Rasterize_Surfel_HW"
+        DEPTH_MERGE_THRES: 0.1
+        POINTS_PER_PIXEL: 80
+        points_per_local: 10
+        num_shading_points: 8
+        BIN_SIZE: 8888
+        SAVE_SURFEL_NAME: "scene0000_01"
+#        FILTER_NEAR_POINTS: False
+    BACKBONE:
+        NAME: "MnasMulti"
+LOG:
+    TASK_NAME: "Test_No_per_scene_default_name"

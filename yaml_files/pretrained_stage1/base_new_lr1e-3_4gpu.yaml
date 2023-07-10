@@ -1,0 +1,8 @@
+# base_new add a valid input list compared with base.yaml
+_BASE_: "./base_new.yaml"
+TRAIN:
+    RESET_OPTIM: True
+    LEARNING_RATE: 0.001
+    LEARNING_RATE_POINTS: 0.001
+LOG:
+    TASK_NAME: "scannet_pretrained_s1_4gpu_1e-3"

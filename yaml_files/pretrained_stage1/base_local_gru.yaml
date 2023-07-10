@@ -1,0 +1,44 @@
+# base_new add a valid input list compared with base.yaml
+img_size_h: 480
+img_size_w: 640
+KEEP_TRAINING: True
+TRAIN:
+    BATCH_SIZE: 1
+    PIN_MEMORY: True
+    SHUFFLE_DATA: True
+    LEARNING_RATE: 0.0005
+    LEARNING_RATE_POINTS: 0.0005
+    LEARNING_RATE_FUSION: 0.0005
+DATA:
+    RANDOM_SAMPLE_SIZE: 220
+    FAR_PLANE: 15.0
+    NEAR_PLANE: 0.1
+    IMG_WH: [640, 480]
+    RGB_Image_DIR: "./datasets/selected_100_scenes"
+    Depth_Image_DIR: "./datasets/selected_100_scenes"
+    DATASET_NAME: "Scannet_S1_multi_scenes_valid_index"
+    DATA_DIR: "./datasets/selected_100_scenes"
+    SCANNET_PKL_PATH: "./datasets/preprocessed_data/scannet_preprocessed_pkl/p2_output"
+    ALL_JSON_PATH: "./datasets/preprocessed_data/json_path/p1_output"
+#    SCENE_NAME: ""  # useless in surfel settings
+    GET_ITEM_TYPE: 3
+    SCANNET_VALID_INPUT_LIST: "./datasets/preprocessed_data/valid_index_scannet_fine.pkl"
+MODEL:
+    NAME: "PointsSurfelModel_wGRU_v1"
+    AGGREGATOR:
+        NAME: "PointAggregator_Surfel"
+    RASTERIZER:
+        NAME: "Rasterize_Surfel_HW"
+        DEPTH_MERGE_THRES: 0.1
+        POINTS_PER_PIXEL: 80
+        points_per_local: 10
+        num_shading_points: 8
+        BIN_SIZE: 8888
+    BACKBONE:
+        NAME: "MnasMulti"
+    FUSION:
+        BUILD_FUSION: True
+        NAME: "GRU2D_naive_Wweights"
+        USE_GRU_DDP: False
+LOG:
+    TASK_NAME: "scannet_pretrained_localGRU_1gpu_debug"
