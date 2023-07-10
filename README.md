@@ -24,7 +24,7 @@ source activate new
 conda install -c pytorch pytorch=1.6.0 torchvision cudatoolkit=10.2
 conda install -c fvcore -c iopath -c conda-forge fvcore iopath
 conda install -c pytorch3d pytorch3d
-pip install matplotlib scikit-image lpips opencv-python inplace_abn open3d
+pip install matplotlib scikit-image lpips opencv-python inplace_abn open3d Pillow tqdm
 ```
 
 * Then compile the dependent libraries:
@@ -51,6 +51,9 @@ SurfelNeRF
     │   │   │──pose
     │   │   │──intrinsic
     ├── export_Scannet_train
+    ├── preprocessed_data
+    │   │──json_path 
+    │   │── scannet_preprocessed_pkl
 ```
 
 ### Download pre-trained checkpoint
