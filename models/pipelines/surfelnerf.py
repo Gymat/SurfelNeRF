@@ -859,8 +859,8 @@ class PointsSurfelModel(PointsBaseModel):
             gt_reshaped = input_data['gt_rgb_img'].reshape(rendered_output['coarse_color'].size())
             losses_dict = self.loss_func.compute_color_l2loss(rendered_output, gt_reshaped,)
             psrn_valid_pixel = mse2psnr(losses_dict['loss_color'])
-            print(losses_dict)
-            print("PSNR: {}".format(psrn_valid_pixel))
+            # print(losses_dict)
+            # print("PSNR: {}".format(psrn_valid_pixel))
 
             rendered_output['coarse_color'] = rendered_output['coarse_color'].reshape(input_data['gt_rgb_img'].size())
             # -------------------- Computing loss ----------------------------------

@@ -612,7 +612,6 @@ class Train_loop_online(nn.Module):
             mean_ssim_1 = sum(metrics['ssim_1']) * 1.0 / len(metrics['ssim_1'])
             mean_lpips_alex = sum(metrics['lpips_alex']) * 1.0 / len(metrics['lpips_alex'])
             mean_lpips_vgg = sum(metrics['lpips_vgg']) * 1.0 / len(metrics['lpips_vgg'])
-            # mean_psrn_valid = sum(valid_psnr_list)*1.0/len(valid_psnr_list)
             print("Average PSNR : {}".format(mean_psnr))
             print("Average SSIM : {}".format(mean_ssim))
             print("Average SSIM data_range=1.0: {}".format(mean_ssim_1))
