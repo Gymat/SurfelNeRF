@@ -37,9 +37,10 @@ sh build.sh
 
 ### Data preparation
 
-We provide the test data and an inference code for 8 test scenes on ScanNet without per-scene optimization. You can direct download
-the preprocessed data provided by us at here: [Google-Drive](). To speed up inference and training, we preprocess the raw data to 
-obtain the corresponding world 3D coordinates as surfels initialization for each pixel based on estimated depth. 
+We provide the test data and an inference code for 8 test scenes on ScanNet without per-scene optimization. 
+To speed up inference and training, we preprocess the raw data to obtain the corresponding world 3D coordinates as surfels initialization for each pixel based on estimated depth.
+You can direct download the preprocessed data provided by us at here: [Google-Drive](https://drive.google.com/file/d/1C4_G7UY69mR40AiawSbfS8x0OT8d5PCb/view?usp=sharing) and the raw data from here: [download-link](). 
+Unzip them and put them in the corresponding path, ```./datasets ```.
 The layout of data should look like:
 ```
 SurfelNeRF
@@ -48,7 +49,6 @@ SurfelNeRF
     │   │──scene0000_01
     │   │   │──color
     │   │   │──depth
-    │   │   │──pose
     │   │   │──intrinsic
     ├── export_Scannet_train
     ├── preprocessed_data
@@ -58,10 +58,13 @@ SurfelNeRF
 
 ### Download pre-trained checkpoint
 
-We trained 
+We trained our SurfelNeRF on random 100 scenes from the ScanNet. 
+The pre-trained checkpoint can be downloaded at here: [link](https://drive.google.com/file/d/1jTv-T2EOs7Y8iTDON3CQZ-NIPXnfIJZL/view?usp=sharing).
+Then put the pre-trained checkpoint in the folder of ```checkpoints```.
 
 ### Run inference code
 
+* 
 
 ## Train SurfelNeRF
 
