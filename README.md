@@ -60,9 +60,16 @@ SurfelNeRF
 
 We trained our SurfelNeRF on random 100 scenes from the ScanNet. 
 The pre-trained checkpoint can be downloaded at here: [link](https://drive.google.com/file/d/1jTv-T2EOs7Y8iTDON3CQZ-NIPXnfIJZL/view?usp=sharing).
-Then put the pre-trained checkpoint in the folder of ```checkpoints```.
+Then put the pre-trained checkpoint in the folder of ```checkpoints```. The layout for quick start of inference test should look like:
+```
+SurfelNeRF
+├── checkpoints
+│   ├── pretrained_checkpoints.pth
+```
 
 ### Run inference code
+
+* To inference one test scene of ScanNet, you can run ```sh dev_scripts/pretrained_test/{Scene-Name}/NoPre_0begin_test.sh```.
 
 * 
 
