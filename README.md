@@ -39,7 +39,7 @@ sh build.sh
 
 We provide the test data and an inference code for 8 test scenes on ScanNet without per-scene optimization. 
 To speed up inference and training, we preprocess the raw data to obtain the corresponding world 3D coordinates as surfels initialization for each pixel based on estimated depth.
-You can direct download the preprocessed data provided by us at here: [Google-Drive](https://drive.google.com/file/d/1C4_G7UY69mR40AiawSbfS8x0OT8d5PCb/view?usp=sharing) and the raw data from here: [download-link](). 
+You can direct download the preprocessed data provided by us at here: [Google-Drive](https://drive.google.com/file/d/1C4_G7UY69mR40AiawSbfS8x0OT8d5PCb/view?usp=sharing) and the raw data from here: [download-link](https://drive.google.com/file/d/1Ci5yXQYmT-i_zadvU9Saq87ha2FB731s/view?usp=sharing). 
 Unzip them and put them in the corresponding path, ```./datasets ```.
 The layout of data should look like:
 ```
@@ -53,7 +53,9 @@ SurfelNeRF
     ├── export_Scannet_train
     ├── preprocessed_data
     │   │──json_path 
+    │   │   │──p1_output_
     │   │── scannet_preprocessed_pkl
+    │   │   │──p2_output_
 ```
 
 ### Download pre-trained checkpoint

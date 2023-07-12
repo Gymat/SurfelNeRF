@@ -1,4 +1,4 @@
-model_weight="./checkpoints/pretrained_checkpoints.pth"
+model_weight="./checkpoints/pretrained__checkpoints.pth"
 log_task_name="init_localgru"
 
 cuda_id=0

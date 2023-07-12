@@ -1,4 +1,4 @@
-model_weight="./checkpoints/scannet_pretrained_0beginGRU_subset_4gpu_0708_t2/100000__checkpoints.pth"
+model_weight="./checkpoints/pretrained__checkpoints.pth"
 log_task_name="init_localgru"
 
 cuda_id=0
