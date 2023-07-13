@@ -14,10 +14,10 @@ DATA:
     FAR_PLANE: 15.0
     NEAR_PLANE: 0.1
     IMG_WH: [640, 480]
-    RGB_Image_DIR: "./datasets/selected_100_scenes"
-    Depth_Image_DIR: "./datasets/selected_100_scenes"
+    RGB_Image_DIR: "./datasets/export_Scannet_train"
+    Depth_Image_DIR: "./datasets/export_Scannet_train"
     DATASET_NAME: "Scannet_S1_multi_scenes_valid_index"
-    DATA_DIR: "./datasets/selected_100_scenes"
+    DATA_DIR: "./datasets/export_Scannet_train"
     SCANNET_PKL_PATH: "./datasets/preprocessed_data/scannet_preprocessed_pkl/p2_output"
     ALL_JSON_PATH: "./datasets/preprocessed_data/json_path/p1_output"
 #    SCENE_NAME: ""  # useless in surfel settings
