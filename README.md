@@ -128,7 +128,12 @@ where `DATA_PATH` is `./datasets/export_Scannet_train` if you follow recommendat
 
 ### Training no-per scene optimization SurfelNeRF
 
+To train the no-per scene optimization model, you can run
+```angular2html
+sh dev_scripts/pretrained_stage2/test_4gpu.sh
+```
 
+To obtain better training performance, you can first train the model within local frames, which can refer ```dev_scripts/pretrained_stage1/test_localgru_4gpu.sh```. After training about 20k iterations, you can change the MODEL_PATH in ```pretrained_stage2/test_4gpu_from_stage1.sh```, and run it.
 
 
 
